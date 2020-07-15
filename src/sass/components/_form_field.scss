@@ -1,0 +1,250 @@
+h1 {
+  font-weight: normal;
+  font-size: 16px;
+  font-style: medium;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* Links */
+
+.large-link {
+  font-size: 16px;
+  font-weight: 300;
+  color: $link-color;
+  text-decoration: none;
+}
+
+.large-link:hover {
+  color: $brand-main-color;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.small-link {
+  font-size: 13px;
+  font-weight: 300;
+  color: $link-color;
+  text-decoration: none;
+}
+
+.small-link:hover {
+  color: $brand-main-color;
+  cursor: pointer;
+}
+
+/* Buttons */
+
+button {
+  width: 93px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 300;
+  outline-style: none;
+
+  &.btn-orange {
+    background-color: $orange;
+  
+    &.btn-orange:hover {
+      background-color: $brand-main-color;
+      cursor: pointer;
+    }
+  }
+
+  &.btn-grey {
+    background-color: $grey;
+  
+    &.btn-grey:hover {
+      background-color: $grey-light;
+      cursor: pointer;
+    }
+  }
+
+  &.btn-disabled {
+    background-color: #e3e3e3;
+    width: 203px;
+  }
+}
+
+/* Date period */
+
+.date-period {
+  display: flex;
+  border: 1px solid $grey-light;
+  border-radius: 5px;
+  width: 320px;
+  height: 40px;
+  font-size: 14px;
+  font-family: $roboto-font;
+  font-weight: 200;
+  padding: 5px;
+
+  &.date-period:hover{
+    border: 1px solid $grey;
+  }
+}
+
+.left-date{
+  display: flex;
+  flex-wrap: wrap;
+  color: $paragraph-color;
+  border: none;
+  border-right: 1px solid $grey-light;
+  width: 45%;
+  height: 100%;
+  padding-left: 15px;
+  outline-style: none;
+}
+
+.right-date{
+  flex-wrap: wrap;
+  color: $paragraph-color;
+  border: none;
+  width: 55%;
+  height: 100%;
+  padding: 0 15px;
+  outline-style: none;
+}
+
+.left-date::-webkit-calendar-picker-indicator {
+  background: url("");
+  width: 10px;
+  height: 10px;
+}
+
+.right-date::-webkit-calendar-picker-indicator {
+  background: url("../images/calendar.svg") no-repeat;
+  filter: $paragraph-color-svg;
+  width: 10px;
+  height: 10px;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+/* List with one digit */
+
+.list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  
+  li {
+    border-bottom: 1px solid $paragraph-color;
+    padding: 0;
+    margin-top: 15px;
+
+    h2 {
+      float: left;
+      margin: 0;
+    }
+
+    p {
+      text-align: right;
+      margin: 8px 0 8px 0;
+      font-size: 16px;
+      font-weight: 300;
+      color: black;
+    }
+  }
+}
+
+/* Table with link */
+
+.table-link {
+  padding: 0;
+  width: 100%;
+  border-top: 1px solid $paragraph-color;
+    
+  tr:hover{
+    background-color: $grey-lighter;
+    transition: 0.3s;
+      
+    .link {
+      display: block;
+    }
+
+    .trash{
+      display: block;
+    }
+  }
+
+  td {
+    padding: 15px;
+    border-bottom: 1px solid $paragraph-color;
+    
+
+    h2{
+      margin: 0;
+    }
+
+    .link{
+      display: none;
+      filter: $orange-svg;
+      width: 18px;
+      height: 18px;
+    }
+
+    .trash{
+      display: none;
+      width: 18px;
+      height: 18px;
+    }
+
+    &:nth-child(3){
+      text-align: center;
+      width: 50px;
+    }
+
+    &:nth-child(4){
+      text-align: center;
+      width: 50px;
+    }
+  }
+}
+
+.table-link .link:hover{
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.table-link .trash:hover{
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* Section header */
+
+.section-header {
+  background-color: #ffffff;
+  margin-top: 15px;
+  width: 100%;
+  height: 46px;
+  padding: 0;
+
+  h1 {
+    padding-top: 10px;
+    margin-left: 15px;
+  }
+}

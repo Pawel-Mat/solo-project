@@ -2,12 +2,168 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Solo project</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="klasa">
-      <h1>tu jest tresc jakis taki niby siaki</h1></div>
+    <section class="left-bar">
+      <div class="logo">
+        <img src="./images/logo.png">
+        <button class="hamburger hamburger-active">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <div class="navigation navigation-active">
+        <ul class="navigation-list">
+          <li class="navigation-item"><img src="./images/general.svg" class="ico"><h3>General</h3></li>
+          <li class="navigation-item"><img src="./images/details.svg" class="ico"><h3>Details</h3></li>
+          <li class="navigation-item"><img src="./images/links.svg" class="ico"><h3>Links</h3></li>
+          <li class="navigation-item"><img src="./images/banners.svg" class="ico"><h3>Banners</h3></li>
+          <li class="navigation-item"><img src="./images/personaldata.svg" class="ico"><h3>Personal data</h3></li>
+          <li class="navigation-item"><img src="./images/payout.svg" class="ico"><h3>Payout</h3></li>
+          <li class="navigation-item"><img src="./images/postback.svg" class="ico"><h3>Postback</h3></li>
+        </ul>
+        <div class="manager">
+          <h3>YOUR MANAGER</h3>
+          <div class="manager-box">
+            <div class="photo">
+              <img src="./images/photo-manager.png">
+              <div class="green-dot"></div>
+            </div>
+            <a href="#" class="small-link">Mikhael E.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6"></div>
+          <div class="col-lg-2 wallet-top-menu">
+            <img src="./images/wallet.svg" class="wallet">
+            <h1>$1,500.00</h1>
+            <img src="./images/arrow-down.svg" class="arrow-down">
+          </div>
+          <div class="col-lg-1 notification-box">
+            <img src="./images/notification.svg" class="notification">
+            <div class="orange-dot"></div>
+          </div>
+          <div class="col-lg-2 profile-box">
+            <img src="./images/profile.svg" class="profile">
+            <a href="#" class="small-link">Leonardo Dicaprio</a>
+          </div>
+          <div class="col-lg-1 quit-box">
+            <img src="./images/quit.svg" class="quit">
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section class="content">
+      <div class="section-header">
+        <h1>General Statistics</h1>
+      </div>
+      <div class="date-period-box">
+        <div class="date-period">
+          <input type="date" value="2016-05-16" class="left-date"><input type="date" value="2016-05-16" class="right-date">
+        </div>
+        <button class="btn-orange"><img src="./images/refresh.svg" class="refresh"></button>
+      </div>
+      <div class="diagram-box">
+        <div class="list-box">
+          <ul class="list left">
+            <li><h2>Visit Signups</h2><p>714</p> </li>
+            <li><h2>FTD </h2><p>445</p></li>
+          </ul>
+          <ul class="list right">
+            <li><h2>Net deposit</h2><p>564</p> </li>
+            <li><h2>Turn over </h2><p>432</p></li>
+          </ul>
+        </div>
+        <div class="graph-diagram-box">
+          <h2>Earnings chart</h2>
+        </div>
+      </div>
+      <div class="links-box">
+        <div class="section-header">
+          <h1>Links</h1>
+        </div>
+        <div class="btn-box">
+          <button class="btn-orange">+ add new</button>
+        </div>
+        
+        <table class="table-link">
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Home page<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.homepage.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Currently offer<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.currently.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Blurpix<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.blurpix.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Your Site<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.yoursite.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Google<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.google.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Facebook<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.facebook.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Dashboard<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.dashboard.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Blurax<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.blurax.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Piece of Wine<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.pieceofwine.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+          <tr class="row">
+            <td class="col-lg-5 col-sm-12"><h2>Twitter<h2></td>
+            <td class="large-link col-lg-5 col-sm-12">http://www.twitter.com</td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+            <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+          </tr>
+        </table>
+        <div class="btn-box">
+          <button class="btn-orange">+ add new</button>
+        </div>
+      </div>
+    </section>
+    <script src="/js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,410 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $roboto-font;
+  line-height: 1.7;
+  color: $paragraph-color;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(100% - 188px);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  // padding-left: 15px;
+  // padding-right: 15px;
+  // background-color: #f5f5f2;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-bar {
+  position: fixed;
+  z-index: 1;
+  width: 188px;
+  height: 100%;
+  background-color: $left-menu-color;
+}
+
+.top-bar {
+  position: fixed;
+  z-index: 1;
+  margin-left: 188px;
+  width: 100%;
+  height: 62px;
+  background-color: white;
+}
+
+.content {
+  position: absolute;
+  margin-left: 188px;
+  margin-top: 62px;
+  width: calc(100% - 188px);
+  padding: 0 15px;
+  background-color: #f5f5f2;
+}
+
+/* Top menu */
+.top-bar {
+  border-bottom: 1px solid $grey-lighter;
+}
+
+.top-bar [class^='col-']:not(.col-lg-6):hover {
+  background-color: $grey-lighter;
+  transition: 0.3s;
+}
+
+.wallet-top-menu{
+  border-left: 1px solid $grey-lighter;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .wallet, .arrow-down{
+    filter: $paragraph-color-svg;
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+}
+
+.notification-box {
+  border-left: 1px solid $grey-lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .notification {
+    filter: $paragraph-color-svg;
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .orange-dot{
+    height: 10px;
+    width: 10px;
+    background-color: $orange;
+    z-index: 1;
+    border-radius: 5px;
+    position: relative;
+    bottom: 9px;
+    right: 30px;
+  }
+}
+
+.profile-box {
+  border-left: 1px solid $grey-lighter;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .profile{
+    filter: $paragraph-color-svg;
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+.quit-box{
+  border-left: 1px solid $grey-lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .quit {
+    filter: $paragraph-color-svg;
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+/* Left bar menu */
+
+.logo {
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  height: 62px;
+  padding-left: 10px;
+  background-color: $left-menu-color;
+}
+
+.hamburger {
+  width: auto;
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0 0 0 25px;
+}
+
+.hamburger-box {
+  width: 25px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  @include hamburger-line;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color .3s .1s ease-in-out;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  @include hamburger-line;
+
+  content: '';
+  left: 0;
+  transition: transform .3s ease-in-out;
+}
+
+.hamburger-inner::before{
+  top: -10px;
+}
+
+.hamburger-inner::after{
+  top: 10px;
+}
+
+.hamburger-active .hamburger-inner {
+  background-color: transparent;
+}
+
+.hamburger-active .hamburger-inner:before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-active .hamburger-inner::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.navigation {
+  height: 100%;
+  z-index: -1;
+  transform: translateY(-188px);
+  transition: transform .3s .1s ease-in-out;
+  width: 100%;
+
+  .navigation-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .navigation-item {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    border-left: 4px solid $left-menu-color;
+  }
+
+  .navigation-item:hover{
+    cursor: pointer;
+    border-left: 4px solid $brand-main-color;
+    background-color: $grey;
+    transition: 0.3s;
+    color: white;
+
+    .ico {
+      filter: $white-svg;
+    }
+  }
+
+  .ico {
+    filter: $paragraph-color-svg;
+    margin: 0 20px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.navigation-active {
+  transform: translateY(0);
+}
+
+.manager h3 {
+  border-top: 1px solid $paragraph-color;
+  font-weight: 500;
+  margin-top: 25px;
+  padding: 20px 0 20px 20px;
+}
+
+.manager img{
+  padding-left: 20px;
+}
+
+.manager .photo {
+  width: 70px;
+  float: left;
+}
+
+.manager .green-dot {
+  height: 10px;
+  width: 10px;
+  background-color: $online-green;
+  z-index: 1;
+  border-radius: 5px;
+  position: relative;
+  bottom: 53px;
+  left: 53px;
+}
+
+.manager-box {
+  display: flex;
+  height: 43px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+
+    .small-link {
+      color: $brand-main-color;
+    }
+  }
+}
+
+.manager-box .small-link{
+  padding: 10px 0 0 15px;
+}
+
+/* Main content */
+
+.date-period-box {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-right: 0;
+  border-top: 1px solid $grey-lighter;
+
+  .btn-orange {
+    margin-left: 13px;
+    width: 40px;
+  }
+
+  .refresh {
+    width: 18px;
+    filter: $white-svg;
+  }
+}
+
+.diagram-box {
+  background-color: white;
+  border-top: 1px solid $grey-lighter;
+}
+
+.list-box {
+  display: flex;
+  max-width: 80%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.list-box .list{
+  width: 50%;
+  padding: 32px;
+  
+}
+
+.list-box .left{
+  float: left;
+}
+
+.list-box .right{
+  float: left;
+}
+
+.graph-diagram-box{
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+
+  h2{
+    width: 556px;
+    float: left;
+  }
+}
+
+.links-box {
+  margin: 15px 0;
+  height: 100%;
+  background-color: white;
+}
+
+.links-box .btn-box {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid $grey-lighter;
+  margin: 0;
+  padding: 24px;
+}
+
+.table-link {
+  max-width: 80%;
+  margin: auto;
+}
+
+@media(max-width: 767px) {
+  @include grid('sm');
+  
+  .left-bar{
+    display: none;
+  }
+
+  .content{
+    margin-left: 0;
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+@media(min-width: 768px) {
+  @include grid('md');
+}
+
+@media(min-width: 992px) {
+  @include grid('lg');
+}
+
+@media(min-width: 1200px) {
+  @include grid('xl');
+}
