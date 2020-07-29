@@ -11,7 +11,6 @@
   <body>
     <section class="left-bar">
       <div class="logo">
-        <img src="./images/logo.png">
         <button class="hamburger hamburger-active">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -20,13 +19,43 @@
       </div>
       <div class="navigation navigation-active">
         <ul class="navigation-list">
-          <li class="navigation-item"><img src="./images/general.svg" class="ico"><h3>General</h3></li>
-          <li class="navigation-item"><img src="./images/details.svg" class="ico"><h3>Details</h3></li>
-          <li class="navigation-item"><img src="./images/links.svg" class="ico"><h3>Links</h3></li>
-          <li class="navigation-item"><img src="./images/banners.svg" class="ico"><h3>Banners</h3></li>
-          <li class="navigation-item"><img src="./images/personaldata.svg" class="ico"><h3>Personal data</h3></li>
-          <li class="navigation-item"><img src="./images/payout.svg" class="ico"><h3>Payout</h3></li>
-          <li class="navigation-item"><img src="./images/postback.svg" class="ico"><h3>Postback</h3></li>
+          <li><a class="navigation-item" href="#general"><img src="./images/general.svg" class="ico"><h3>General</h3></a></li>
+          <li><a class="navigation-item" href="#details"><img src="./images/details.svg" class="ico"><h3>Details</h3></a></li>
+          <li><a class="navigation-item" href="#links"><img src="./images/links.svg" class="ico"><h3>Links</h3></a></li>
+          <li><a class="navigation-item" href="#banners"><img src="./images/banners.svg" class="ico"><h3>Banners</h3></a></li>
+          <li><a class="navigation-item" href="#personal-data"><img src="./images/personaldata.svg" class="ico"><h3>Personal data</h3></a></li>
+          <li><a class="navigation-item" href="#payout"><img src="./images/payout.svg" class="ico"><h3>Payout</h3></a></li>
+          <li><a class="navigation-item" href="#postback"><img src="./images/postback.svg" class="ico"><h3>Postback</h3></a></li>
+        </ul>
+        <div class="manager">
+          <h3>YOUR MANAGER</h3>
+          <div class="manager-box" id="your-manager">
+            <div class="photo">
+              <img src="./images/photo-manager.png">
+              <div class="green-dot"></div>
+            </div>
+            <a href="#" class="small-link">Mikhael E.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mobile-menu">
+      <div class="logo">
+        <button class="hamburger hamburger-active">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <div class="navigation navigation-active">
+        <ul class="navigation-list">
+          <li><a class="navigation-item" href="#general"><img src="./images/general.svg" class="ico"><h3>General</h3></a></li>
+          <li><a class="navigation-item" href="#details"><img src="./images/details.svg" class="ico"><h3>Details</h3></a></li>
+          <li><a class="navigation-item" href="#links"><img src="./images/links.svg" class="ico"><h3>Links</h3></a></li>
+          <li><a class="navigation-item" href="#banners"><img src="./images/banners.svg" class="ico"><h3>Banners</h3></a></li>
+          <li><a class="navigation-item" href="#personal-data"><img src="./images/personaldata.svg" class="ico"><h3>Personal data</h3></a></li>
+          <li><a class="navigation-item" href="#payout"><img src="./images/payout.svg" class="ico"><h3>Payout</h3></a></li>
+          <li><a class="navigation-item" href="#postback"><img src="./images/postback.svg" class="ico"><h3>Postback</h3></a></li>
         </ul>
         <div class="manager">
           <h3>YOUR MANAGER</h3>
@@ -36,6 +65,21 @@
               <div class="green-dot"></div>
             </div>
             <a href="#" class="small-link">Mikhael E.</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 wallet-top-menu">
+            <img src="./images/wallet.svg" class="wallet ico">
+          </div>
+          <div class="col-sm-3 notification-box">
+            <img src="./images/notification.svg" class="notification ico">
+            <div class="orange-dot"></div>
+          </div>
+          <div class="col-sm-3 profile-box">
+            <img src="./images/profile.svg" class="profile ico">
+          </div>
+          <div class="col-sm-3 quit-box">
+            <img src="./images/quit.svg" class="quit ico">
           </div>
         </div>
       </div>
@@ -64,10 +108,11 @@
       </div>
       
     </section>
-    <section class="content">
-      <div class="section-header">
-        <h1>General Statistics</h1>
-      </div>
+    <div id="pages">
+      <section id="general" class="content">
+        <div class="section-header">
+          <h1>General Statistics</h1>
+        </div>
       <div class="date-period-box">
         <div class="date-period">
           <input type="date" value="2016-05-16" class="left-date"><input type="date" value="2016-05-16" class="right-date">
@@ -75,18 +120,22 @@
         <button class="btn-orange"><img src="./images/refresh.svg" class="refresh"></button>
       </div>
       <div class="diagram-box">
-        <div class="list-box">
-          <ul class="list left">
+        <div class="list-box row">
+          <ul class="list left col-sm-12">
             <li><h2>Visit Signups</h2><p>714</p> </li>
             <li><h2>FTD </h2><p>445</p></li>
           </ul>
-          <ul class="list right">
+          <ul class="list right col-sm-12">
             <li><h2>Net deposit</h2><p>564</p> </li>
             <li><h2>Turn over </h2><p>432</p></li>
           </ul>
         </div>
-        <div class="graph-diagram-box">
+        <div class="graph-diagram-box scroll-wrapper">
           <h2>Earnings chart</h2>
+          <div class="chart-box scroll-wrapper">
+            <canvas id="myChart"></canvas>
+          </div>
+          
         </div>
       </div>
       <div class="links-box">
@@ -163,7 +212,135 @@
           <button class="btn-orange">+ add new</button>
         </div>
       </div>
-    </section>
+      </section>
+      <section id="details" class="content">
+        <div class="section-header">
+          <h1>Under Construction...</h1>
+        </div>
+      </section>
+      <section id="links" class="content">
+        <div class="links-box">
+          <div class="section-header">
+            <h1>Links</h1>
+          </div>
+          <div class="btn-box">
+            <button class="btn-orange">+ add new</button>
+          </div>
+          
+          <table class="table-link">
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Home page<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.homepage.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Currently offer<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.currently.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Blurpix<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.blurpix.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Your Site<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.yoursite.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Google<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.google.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Facebook<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.facebook.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Dashboard<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.dashboard.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Blurax<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.blurax.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Piece of Wine<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.pieceofwine.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+            <tr class="row">
+              <td class="col-lg-5 col-sm-12"><h2>Twitter<h2></td>
+              <td class="large-link col-lg-5 col-sm-12">http://www.twitter.com</td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/links.svg" class="link"></td>
+              <td class="col-lg-1 col-sm-6"><img src="./images/trash.svg" class="trash"></td>
+            </tr>
+          </table>
+          <div class="btn-box">
+            <button class="btn-orange">+ add new</button>
+          </div>
+        </div>
+      </section>
+      <section id="banners" class="content">
+        <div class="section-header">
+          <h1>Under Construction...</h1>
+        </div>
+      </section>
+      <section id="personal-data" class="content">
+        <div class="section-header">
+          <h1>Under Construction...</h1>
+        </div>
+      </section>
+      <section id="payout" class="content">
+        <div class="section-header">
+          <h1>Under Construction...</h1>
+        </div>
+      </section>
+      <section id="postback" class="content">
+        <div class="section-header">
+          <h1>Under Construction...</h1>
+        </div>
+      </section>
+    </div>
+    <div class="overlay" id="overlay">
+      <div class="modal" id="chatWithManager">
+        <div class="section-header">
+          <h1>Online chat with your personal Manager</h1>
+          <div class="btn-close js--close-modal">x</div>
+        </div>
+        <div class="manager-status">
+          <img src="images/photo-manager.png">
+          <div class="status">
+            <p>Michael E.</p>
+            <span>Online</span>
+          </div>
+        </div>
+        <div class="chat-area">
+
+        </div>
+        <div class="input-box wrapper">
+          <div class="input col-8">
+            <img src="images/message.svg">
+            <input type="text" placeholder="Enter the message...">
+          </div>
+          <button class="btn-orange col-4">Send</button>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>
