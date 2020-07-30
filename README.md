@@ -1,1 +1,1 @@
-https://pawel-mat.github.io/solo-project/
+https://solo-project-kodilla.herokuapp.com/
