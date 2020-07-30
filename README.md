@@ -1,3 +1,1 @@
-# solo-project
-
-https://git.heroku.com/solo-project-kodilla.git
+https://pawel-mat.github.io/solo-project/
